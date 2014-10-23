@@ -1,0 +1,6 @@
+{
+  "name": "Edwin",
+  "dependencies": {
+    "angular": "1.2.24"
+  }
+}

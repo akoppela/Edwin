@@ -1,0 +1,466 @@
+/* reset */
+/* animation */
+/* button */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, input,
+textarea, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+  a img {
+    border: 0; }
+
+textarea {
+  resize: none; }
+
+footer, header, aside, nav, menu, video, audio, time, progress, section, article {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  display: block; }
+
+aside {
+  text-align: right; }
+
+input[type="file"] {
+  opacity: 0;
+  -moz-opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+  cursor: pointer; }
+
+/* colors */
+/* shadows */
+@font-face {
+  font-family: "Driftwood";
+  font-style: normal;
+  src: local("Driftwood"), url("../fonts/Driftwood.eot") format("oet"), local("Driftwood"), url("../fonts/Driftwood.woff") format("woff"), local("Comfortaa Regular"), url("../fonts/Driftwood.ttf") format("truetype"), url("../fonts/Driftwood.svg") format("svg"); }
+/* master */
+html {
+  position: relative;
+  min-width: 1000px;
+  height: 100%;
+  min-height: 100%;
+  background: url("../images/backgrounds/bg.jpg") no-repeat center top;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+html, html a {
+  color: #fff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5); }
+
+html * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 13px;
+  font-family: "Driftwood", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 20px;
+  padding: 20px;
+  min-height: 100%; }
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px; }
+  #container > header {
+    width: 100%;
+    height: 200px;
+    -moz-perspective: 500px;
+    -webkit-perspective: 500px;
+    -o-perspective: 500px;
+    -ms-perspective: 500px;
+    perspective: 500px;
+    perspective-origin: 50% 45%;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+    #container > header > h1 {
+      position: absolute;
+      z-index: 10;
+      top: 100%;
+      left: 0;
+      margin-top: -100px;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      vertical-align: bottom;
+      font-size: 90px;
+      text-align: center;
+      -moz-transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translateZ(-75px);
+      -moz-transform: translateZ(-75px);
+      -o-transform: translateZ(-75px);
+      -ms-transform: translateZ(-75px);
+      -webkit-transform: translateZ(-75px); }
+    #container > header > #carousel {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -moz-transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d; }
+      #container > header > #carousel:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+        margin: 5px;
+        border: 1px solid #000;
+        -moz-border-radius: 40px;
+        -o-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -khtml-border-radius: 40px;
+        -webkit-border-radius: 40px;
+        border-radius: 40px;
+        opacity: 0.75;
+        -moz-opacity: 0.75;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
+      #container > header > #carousel:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        margin: -10px;
+        border: 1px solid #000;
+        -moz-border-radius: 55px;
+        -o-border-radius: 55px;
+        -ms-border-radius: 55px;
+        -khtml-border-radius: 55px;
+        -webkit-border-radius: 55px;
+        border-radius: 55px;
+        opacity: 0.75;
+        -moz-opacity: 0.75;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
+      #container > header > #carousel > .front {
+        position: absolute;
+        width: 980px;
+        height: 220px;
+        margin-left: -10px;
+        margin-top: -10px;
+        border: 15px solid transparent;
+        background: url("../images/backgrounds/front_wood.png") no-repeat center;
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
+        -moz-border-radius: 55px;
+        -o-border-radius: 55px;
+        -ms-border-radius: 55px;
+        -khtml-border-radius: 55px;
+        -webkit-border-radius: 55px;
+        border-radius: 55px; }
+        #container > header > #carousel > .front:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          -moz-transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d;
+          -o-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+          -moz-border-radius: 40px;
+          -o-border-radius: 40px;
+          -ms-border-radius: 40px;
+          -khtml-border-radius: 40px;
+          -webkit-border-radius: 40px;
+          border-radius: 40px; }
+        #container > header > #carousel > .front:after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: -15px;
+          right: -15px;
+          bottom: -15px;
+          top: -15px;
+          -moz-transform-style: preserve-3d;
+          -webkit-transform-style: preserve-3d;
+          -o-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+          -moz-border-radius: 55px;
+          -o-border-radius: 55px;
+          -ms-border-radius: 55px;
+          -khtml-border-radius: 55px;
+          -webkit-border-radius: 55px;
+          border-radius: 55px; }
+      #container > header > #carousel > .back {
+        position: absolute;
+        width: 980px;
+        height: 220px;
+        margin-left: -10px;
+        margin-top: -10px;
+        border: 10px solid transparent;
+        background: url("../images/backgrounds/back_wood.png") no-repeat center;
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        -moz-border-radius: 55px;
+        -o-border-radius: 55px;
+        -ms-border-radius: 55px;
+        -khtml-border-radius: 55px;
+        -webkit-border-radius: 55px;
+        border-radius: 55px;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+        transform: rotateY(180deg) translateZ(200px); }
+        #container > header > #carousel > .back:before {
+          content: "";
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
+          -moz-border-radius: 40px;
+          -o-border-radius: 40px;
+          -ms-border-radius: 40px;
+          -khtml-border-radius: 40px;
+          -webkit-border-radius: 40px;
+          border-radius: 40px; }
+        #container > header > #carousel > .back:after {
+          content: "";
+          z-index: 5;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 1px solid #000;
+          -moz-border-radius: 40px;
+          -o-border-radius: 40px;
+          -ms-border-radius: 40px;
+          -khtml-border-radius: 40px;
+          -webkit-border-radius: 40px;
+          border-radius: 40px;
+          opacity: 0.75;
+          -moz-opacity: 0.75;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
+      #container > header > #carousel > .top {
+        position: absolute;
+        width: 904px;
+        height: 200px;
+        margin-left: 28px;
+        background: #704442 url("../images/backgrounds/wood.jpg");
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transform: rotateX(90deg) translateZ(100px) translateY(-100px);
+        box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4); }
+      #container > header > #carousel > .bottom {
+        position: absolute;
+        width: 904px;
+        height: 200px;
+        margin-left: 28px;
+        background: #704442 url("../images/backgrounds/wood.jpg");
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transform: rotateX(-90deg) translateZ(100px) translateY(100px);
+        box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4); }
+      #container > header > #carousel > .left {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        left: 50px;
+        background: #704442 url("../images/backgrounds/wood.jpg");
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px) translateY(100px);
+        box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4); }
+      #container > header > #carousel > .right {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        left: 100%;
+        margin-left: 50px;
+        background: #704442 url("../images/backgrounds/wood.jpg");
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px) translateY(100px);
+        box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
+        -webkit-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4); }
+      #container > header > #carousel > .corner {
+        width: 24px;
+        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: -100px;
+        -moz-transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d; }
+        #container > header > #carousel > .corner > section {
+          position: absolute;
+          width: 24px;
+          height: 200px;
+          background: #704442 url("../images/backgrounds/wood.jpg");
+          box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
+          -webkit-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4); }
+        #container > header > #carousel > .corner.top-left {
+          transform: rotateX(90deg) translateX(-440px) translateY(-100px) translateZ(60px); }
+          #container > header > #carousel > .corner.top-left > section:nth-child(1) {
+            transform: rotateY(270deg) translateZ(40px); }
+          #container > header > #carousel > .corner.top-left > section:nth-child(2) {
+            transform: rotateY(300deg) translateZ(40px); }
+          #container > header > #carousel > .corner.top-left > section:nth-child(3) {
+            transform: rotateY(330deg) translateZ(40px); }
+        #container > header > #carousel > .corner.top-right {
+          transform: rotateX(90deg) translateX(440px) translateY(-100px) translateZ(60px); }
+          #container > header > #carousel > .corner.top-right > section:nth-child(1) {
+            transform: rotateY(30deg) translateZ(40px); }
+          #container > header > #carousel > .corner.top-right > section:nth-child(2) {
+            transform: rotateY(60deg) translateZ(40px); }
+          #container > header > #carousel > .corner.top-right > section:nth-child(3) {
+            transform: rotateY(90deg) translateZ(40px); }
+        #container > header > #carousel > .corner.bottom-left {
+          transform: rotateX(90deg) translateX(-440px) translateY(-100px) translateZ(-60px); }
+          #container > header > #carousel > .corner.bottom-left > section:nth-child(1) {
+            transform: rotateY(210deg) translateZ(40px); }
+          #container > header > #carousel > .corner.bottom-left > section:nth-child(2) {
+            transform: rotateY(240deg) translateZ(40px); }
+          #container > header > #carousel > .corner.bottom-left > section:nth-child(3) {
+            transform: rotateY(270deg) translateZ(40px); }
+        #container > header > #carousel > .corner.bottom-right {
+          transform: rotateX(90deg) translateX(440px) translateY(-100px) translateZ(-60px); }
+          #container > header > #carousel > .corner.bottom-right > section:nth-child(1) {
+            transform: rotateY(90deg) translateZ(40px); }
+          #container > header > #carousel > .corner.bottom-right > section:nth-child(2) {
+            transform: rotateY(120deg) translateZ(40px); }
+          #container > header > #carousel > .corner.bottom-right > section:nth-child(3) {
+            transform: rotateY(150deg) translateZ(40px); }

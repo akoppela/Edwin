@@ -1,0 +1,45 @@
+!!! 5
+%html{ng: {app: "Edwin"}}
+  %head
+    %title Edwin
+    %meta{http: {equiv: 'Content-Type'}, content: 'text/html;charset=utf-8'}
+    %meta{name: 'description', content: 'Edwin'}
+    %meta{name: 'keywords', content: 'Edwin'}
+    %link{rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon'}
+    %link{rel: "stylesheet", type: "text/css", href: "public/stylesheets/application.css"}
+    %script{type: "text/javascript", src: "vendor/components/angular/angular.min.js"}
+    %script{type: "text/javascript", src: "public/javascripts/application.js"}
+    /[if IE]
+      %link{rel: "stylesheet", type: "text/css", href: "public/stylesheets/ie.css"}
+    
+  %body{ng: {controller: "WelcomeCtrl"}}<>
+    #container<>
+      %header
+        %h1 Edwin Ulin
+        #carousel
+          .front
+          .back
+          .top
+          .bottom
+          .left
+          .right
+          
+          .corner.top-left
+            %section
+            %section
+            %section
+          
+          .corner.top-right
+            %section
+            %section
+            %section
+          
+          .corner.bottom-left
+            %section
+            %section
+            %section
+          
+          .corner.bottom-right
+            %section
+            %section
+            %section
