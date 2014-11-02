@@ -16,8 +16,8 @@
   </head><body ng-controller='WelcomeCtrl'><div du-scroll-container='scroll-container' id='container'><div class='content'>
     <div class='top'></div>
     <div class='left'></div>
-    <div class='middle'><h1><a href='#'>Edwin Ulin</a></h1><div class='content' id='scroll-container'><div id='gallery'>
-        <div class='text'><a class='left' href='#' ng-click="setCurrent('prev')"></a><div class='img' ng-class="isCurrent(image) ? 'active' : ''" ng-repeat='image in images' style='background-image: url({{image}})'></div><a class='right' href='#' ng-click="setCurrent('next')"></a></div>
+    <div class='middle'><h1>Edwin Ulin</h1><div class='content' id='scroll-container'><div id='gallery'>
+        <div class='text'><a class='left' href ng-click="setCurrent('prev')"></a><div class='img' ng-class="isCurrent(image) ? 'active' : ''" ng-repeat='image in images' style='background-image: url({{image}})'></div><a class='right' href ng-click="setCurrent('next')"></a></div>
       </div><div id='about'>
         <div class='text'>
           <p>My name is Mr. Edwin Ibrahim. Our company focuses on design and supervising consultant. As a design company we use ecology concept that combine with modern material.</p>

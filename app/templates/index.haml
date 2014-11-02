@@ -21,15 +21,14 @@
         .left
         
         .middle
-          %h1<>
-            %a{href: '#'}> Edwin Ulin
+          %h1<> Edwin Ulin
           
           .content#scroll-container<
             #gallery>
               .text<
-                %a.left{href: '#', ng: {click: "setCurrent('prev')"}}>
+                %a.left{href: true, ng: {click: "setCurrent('prev')"}}>
                 .img{ng: {repeat: "image in images", class: "isCurrent(image) ? 'active' : ''"}, style: "background-image: url({{image}})"}>
-                %a.right{href: '#', ng: {click: "setCurrent('next')"}}>
+                %a.right{href: true, ng: {click: "setCurrent('next')"}}>
             
             #about>
               .text
