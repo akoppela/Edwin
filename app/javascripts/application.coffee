@@ -15,7 +15,7 @@ Edwin = angular.module 'Edwin', ['duScroll']
 
 Edwin.value('duScrollSpyWait', 0)
 
-Edwin.controller 'WelcomeCtrl', ['$scope', ($scope) ->
+Edwin.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window) ->
   $scope.setActive = (item)->
     $scope.active = item
   

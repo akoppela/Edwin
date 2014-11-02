@@ -30,7 +30,7 @@
   Edwin.value('duScrollSpyWait', 0);
 
   Edwin.controller('WelcomeCtrl', [
-    '$scope', function($scope) {
+    '$scope', '$window', function($scope, $window) {
       $scope.setActive = function(item) {
         return $scope.active = item;
       };
