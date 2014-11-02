@@ -355,10 +355,10 @@ body {
               width: 100%;
               height: 100%;
               background: no-repeat center;
-              -moz-background-size: contain;
-              -webkit-background-size: contain;
-              -o-background-size: contain;
-              background-size: contain;
+              -moz-background-size: cover;
+              -webkit-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
               opacity: 0;
               -moz-opacity: 0;
               -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
