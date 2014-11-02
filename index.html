@@ -8,14 +8,17 @@
     <link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <link href='public/stylesheets/application.css' rel='stylesheet' type='text/css'>
     <script src='vendor/components/angular/angular.min.js' type='text/javascript'></script>
+    <script src='vendor/components/angular-scroll/angular-scroll.min.js' type='text/javascript'></script>
     <script src='public/javascripts/application.js' type='text/javascript'></script>
     <!--[if IE]>
       <link href='public/stylesheets/ie.css' rel='stylesheet' type='text/css'>
     <![endif]-->
-  </head><body ng-controller='WelcomeCtrl'><div id='container'><div class='content'>
+  </head><body ng-controller='WelcomeCtrl'><div du-scroll-container='scroll-container' id='container'><div class='content'>
     <div class='top'></div>
     <div class='left'></div>
-    <div class='middle'><h1><a href='#'>Edwin Ulin</a></h1><div class='content'><div id='about'>
+    <div class='middle'><h1><a href='#'>Edwin Ulin</a></h1><div class='content' id='scroll-container'><div id='gallery'>
+        <div class='text'><a class='left' href='#' ng-click="setCurrent('prev')"></a><div class='img' ng-class="isCurrent(image) ? 'active' : ''" ng-repeat='image in images' style='background-image: url({{image}})'></div><a class='right' href='#' ng-click="setCurrent('next')"></a></div>
+      </div><div id='about'>
         <div class='text'>
           <p>My name is Mr. Edwin Ibrahim. Our company focuses on design and supervising consultant. As a design company we use ecology concept that combine with modern material.</p>
           <p>The shape and function of building is according to the owner (according the global concept that owner give) blended with architect creativity and appropriate with land and building regulation. As a supervisor consultant we act as e mediator between owner and contractor.</p>
@@ -23,23 +26,32 @@
           <p>Why this system is better than other, because if there is a problem with one contractor the other still can work and it possible for us to get our project on time. For the payment process will handle by the notaries after the owner give money to the notaries and then the notaries give the money to each contractor according to the conract and progress of the project after agreed by the architect (supervisor).</p>
           <p class='center'>That all about us. Thank you.</p>
         </div>
-      </div><div id='gallery'></div><div id='contact'></div></div>
+      </div><div id='contact'>
+        <div class='text'>
+          <iframe frameborder='0' height='100%' src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d887.3025616946098!2d106.78512399999998!3d-6.780900999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNDYnNTEuMiJTIDEwNsKwNDcnMDYuNSJF!5e1!3m2!1sru!2sid!4v1414939509967' style='border:0' width='100%'></iframe>
+          <p class='left'>
+            <span>Email:</span>
+            <a href='mailto:edwin_pasti@yahoo.com'>edwin_pasti@yahoo.com</a>
+          </p>
+          <p class='right'>Phone: +6281239327099</p>
+        </div>
+      </div></div>
     </div>
     <div class='right'></div>
-  </div><nav><a href='#' ng-class="isActive('about') ? 'active' : ''" ng-click="setActive('about')">
-    <span>About</span>
+  </div><nav><a du-scrollspy='gallery' href='#gallery'>
+    <span>Gallery</span>
     <div class='step'>
       <div class='top'></div>
       <div class='front'></div>
       <div class='right'></div>
     </div>
-  </a><a href='#' ng-class="isActive('gallery') ? 'active' : ''" ng-click="setActive('gallery')">
-    <span>Gallery</span>
+  </a><a du-scrollspy='about' href='#about'>
+    <span>About</span>
     <div class='step'>
       <div class='top'></div>
       <div class='front'></div>
     </div>
-  </a><a href='#' ng-class="isActive('contact') ? 'active' : ''" ng-click="setActive('contact')">
+  </a><a du-scrollspy='contact' href='#contact'>
     <span>Contact</span>
     <div class='step'>
       <div class='top'></div>

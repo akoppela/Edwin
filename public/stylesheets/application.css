@@ -139,7 +139,7 @@ body {
   font-size: 20px;
   font-family: "Driftwood", sans-serif;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 26px;
   height: 100%;
   min-height: 100%; }
@@ -236,6 +236,29 @@ body {
       -o-transform: translateZ(-100px);
       -ms-transform: translateZ(-100px);
       -webkit-transform: translateZ(-100px); }
+      #container > .content > .middle:before, #container > .content > .middle:after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        height: 15px;
+        width: 100%;
+        left: 0;
+        transform: translateZ(1px);
+        -moz-transform: translateZ(1px);
+        -o-transform: translateZ(1px);
+        -ms-transform: translateZ(1px);
+        -webkit-transform: translateZ(1px); }
+      #container > .content > .middle:before {
+        top: 100px;
+        box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: inset 0 10px 10px rgba(0, 0, 0, 0.25); }
+      #container > .content > .middle:after {
+        top: 100%;
+        margin-top: -65px;
+        box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: inset 0 -10px 10px rgba(0, 0, 0, 0.25); }
       #container > .content > .middle > h1 {
         position: relative;
         z-index: 10;
@@ -253,53 +276,165 @@ body {
         width: 100%;
         left: 0;
         top: 100px;
-        bottom: 50px; }
+        bottom: 50px;
+        transform: translateZ(1px);
+        -moz-transform: translateZ(1px);
+        -o-transform: translateZ(1px);
+        -ms-transform: translateZ(1px);
+        -webkit-transform: translateZ(1px); }
+        #container > .content > .middle .content > * {
+          zoom: 1;
+          display: inline;
+          display: -moz-inline-box;
+          display: inline-block;
+          *display: inline;
+          vertical-align: top; }
+        #container > .content > .middle .content > div > .text {
+          width: 940px;
+          position: relative;
+          margin: 20px auto;
+          padding: 30px;
+          background: #fff;
+          font-family: "Planer", sans-serif;
+          color: #000;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+          -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+          -moz-border-radius: 2px;
+          -o-border-radius: 2px;
+          -ms-border-radius: 2px;
+          -khtml-border-radius: 2px;
+          -webkit-border-radius: 2px;
+          border-radius: 2px; }
+          #container > .content > .middle .content > div > .text > * {
+            zoom: 1;
+            vertical-align: top; }
+          #container > .content > .middle .content > div > .text:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5); }
         #container > .content > .middle .content #about {
+          width: 100%;
           text-align: justify; }
           #container > .content > .middle .content #about > * {
             zoom: 1;
             vertical-align: top; }
-          #container > .content > .middle .content #about > .text {
-            width: 1000px;
-            position: relative;
-            margin: 20px auto;
-            padding: 30px;
-            background: #fff;
-            font-family: "Planer", sans-serif;
-            color: #000;
-            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-            -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-            -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-            -moz-border-radius: 2px;
-            -o-border-radius: 2px;
-            -ms-border-radius: 2px;
-            -khtml-border-radius: 2px;
-            -webkit-border-radius: 2px;
-            border-radius: 2px; }
-            #container > .content > .middle .content #about > .text > * {
+          #container > .content > .middle .content #about > .text > h2 {
+            line-height: 50px;
+            text-align: center;
+            font-size: 40px; }
+            #container > .content > .middle .content #about > .text > h2 + * {
+              margin-top: 20px; }
+          #container > .content > .middle .content #about > .text > p.center {
+            text-align: center; }
+          #container > .content > .middle .content #about > .text > p + * {
+            margin-top: 20px; }
+        #container > .content > .middle .content #gallery {
+          width: 100%;
+          height: 100%; }
+          #container > .content > .middle .content #gallery > .text {
+            position: absolute;
+            top: 0;
+            bottom: 10px;
+            padding: 10px;
+            left: 50%;
+            margin-left: -470px;
+            text-align: center; }
+            #container > .content > .middle .content #gallery > .text > * {
               zoom: 1;
+              display: inline;
+              display: -moz-inline-box;
+              display: inline-block;
+              *display: inline;
               vertical-align: top; }
-            #container > .content > .middle .content #about > .text:before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
+            #container > .content > .middle .content #gallery > .text > .img {
+              position: relative;
               width: 100%;
               height: 100%;
-              box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
-              -moz-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
-              -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5); }
-            #container > .content > .middle .content #about > .text > h2 {
-              line-height: 50px;
-              text-align: center;
-              font-size: 40px; }
-              #container > .content > .middle .content #about > .text > h2 + * {
-                margin-top: 20px; }
-            #container > .content > .middle .content #about > .text > p.center {
-              text-align: center; }
-            #container > .content > .middle .content #about > .text > p + * {
-              margin-top: 20px; }
+              background: no-repeat center;
+              -moz-background-size: contain;
+              -webkit-background-size: contain;
+              -o-background-size: contain;
+              background-size: contain;
+              opacity: 0;
+              -moz-opacity: 0;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+              -webkit-transition: all 0.5s ease-in-out;
+              -moz-transition: all 0.5s ease-in-out;
+              -o-transition: all 0.5s ease-in-out;
+              -ms-transition: all 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out; }
+              #container > .content > .middle .content #gallery > .text > .img.active {
+                z-index: 1;
+                opacity: 1;
+                -moz-opacity: 1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; }
+              #container > .content > .middle .content #gallery > .text > .img + .img {
+                margin-left: -100%; }
+            #container > .content > .middle .content #gallery > .text > .left, #container > .content > .middle .content #gallery > .text > .right {
+              position: absolute;
+              z-index: 2;
+              top: 0;
+              bottom: 0;
+              margin-top: -19px;
+              opacity: 0;
+              -moz-opacity: 0;
+              -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+              -webkit-transition: all 0.25s ease-in-out;
+              -moz-transition: all 0.25s ease-in-out;
+              -o-transition: all 0.25s ease-in-out;
+              -ms-transition: all 0.25s ease-in-out;
+              transition: all 0.25s ease-in-out; }
+              #container > .content > .middle .content #gallery > .text > .left:hover, #container > .content > .middle .content #gallery > .text > .right:hover {
+                opacity: 1;
+                -moz-opacity: 1;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; }
+            #container > .content > .middle .content #gallery > .text > .left {
+              left: -35px;
+              right: 50%;
+              background: url("../images/backgrounds/arrow_left.png") no-repeat left center; }
+            #container > .content > .middle .content #gallery > .text > .right {
+              left: 50%;
+              right: -35px;
+              background: url("../images/backgrounds/arrow_right.png") no-repeat right center; }
+        #container > .content > .middle .content #contact {
+          width: 100%;
+          height: 100%; }
+          #container > .content > .middle .content #contact > .text {
+            position: absolute;
+            top: 0;
+            bottom: 10px;
+            padding: 20px;
+            left: 50%;
+            margin-left: -470px; }
+            #container > .content > .middle .content #contact > .text > p {
+              position: absolute;
+              width: 50%;
+              top: 100%;
+              margin-top: -40px;
+              line-height: 30px;
+              height: 30px; }
+              #container > .content > .middle .content #contact > .text > p > a {
+                position: relative;
+                z-index: 1;
+                color: #000;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+                text-decoration: none; }
+                #container > .content > .middle .content #contact > .text > p > a:hover {
+                  text-decoration: underline; }
+              #container > .content > .middle .content #contact > .text > p.left {
+                left: 20px;
+                z-index: 1; }
+              #container > .content > .middle .content #contact > .text > p.right {
+                right: 20px;
+                text-align: right; }
     #container > .content > .right {
       left: 100%;
       margin-left: -100px;
@@ -375,16 +510,17 @@ body {
         height: 100px;
         line-height: 150px;
         position: relative;
+        z-index: 10;
         -webkit-transition: all 0.25s ease-in-out;
         -moz-transition: all 0.25s ease-in-out;
         -o-transition: all 0.25s ease-in-out;
         -ms-transition: all 0.25s ease-in-out;
         transition: all 0.25s ease-in-out;
-        transform: translateZ(-50px);
-        -moz-transform: translateZ(-50px);
-        -o-transform: translateZ(-50px);
-        -ms-transform: translateZ(-50px);
-        -webkit-transform: translateZ(-50px); }
+        transform: translateZ(-40px);
+        -moz-transform: translateZ(-40px);
+        -o-transform: translateZ(-40px);
+        -ms-transform: translateZ(-40px);
+        -webkit-transform: translateZ(-40px); }
       #container > nav > a > .step {
         position: absolute;
         z-index: 1;
@@ -493,11 +629,11 @@ body {
             -ms-transform: rotate(90deg);
             transform: rotate(90deg); }
       #container > nav > a:hover > span {
-        transform: translateZ(-50px) translateY(-5px);
-        -moz-transform: translateZ(-50px) translateY(-5px);
-        -o-transform: translateZ(-50px) translateY(-5px);
-        -ms-transform: translateZ(-50px) translateY(-5px);
-        -webkit-transform: translateZ(-50px) translateY(-5px); }
+        transform: translateZ(-40px) translateY(-5px);
+        -moz-transform: translateZ(-40px) translateY(-5px);
+        -o-transform: translateZ(-40px) translateY(-5px);
+        -ms-transform: translateZ(-40px) translateY(-5px);
+        -webkit-transform: translateZ(-40px) translateY(-5px); }
       #container > nav > a:hover > .step {
         margin-top: -5px;
         height: 5px; }
@@ -508,11 +644,11 @@ body {
         -moz-opacity: 1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; }
         #container > nav > a.active > span {
-          transform: translateZ(-50px) translateY(-10px);
-          -moz-transform: translateZ(-50px) translateY(-10px);
-          -o-transform: translateZ(-50px) translateY(-10px);
-          -ms-transform: translateZ(-50px) translateY(-10px);
-          -webkit-transform: translateZ(-50px) translateY(-10px); }
+          transform: translateZ(-40px) translateY(-10px);
+          -moz-transform: translateZ(-40px) translateY(-10px);
+          -o-transform: translateZ(-40px) translateY(-10px);
+          -ms-transform: translateZ(-40px) translateY(-10px);
+          -webkit-transform: translateZ(-40px) translateY(-10px); }
         #container > nav > a.active > .step {
           margin-top: -10px;
           height: 10px; }
