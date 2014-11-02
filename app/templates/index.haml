@@ -14,5 +14,54 @@
     
   %body{ng: {controller: "WelcomeCtrl"}}<>
     #container<>
-      %header
-        %h1 Edwin Ulin
+      .content
+        .top
+        
+        .left
+        
+        .middle
+          %h1<>
+            %a{href: '#'}> Edwin Ulin
+          
+          .content<
+            #about>
+              .text
+                %p My name is Mr. Edwin Ibrahim. Our company focuses on design and supervising consultant. As a design company we use ecology concept that combine with modern material.
+            
+                %p The shape and function of building is according to the owner (according the global concept that owner give) blended with architect creativity and appropriate with land and building regulation. As a supervisor consultant we act as e mediator between owner and contractor.
+            
+                %p We have system when we do our project. We use more than one contractor and divide the contractor according to their skills depend on the job description on the project like sctucture construction, glass work, electrical work, terrazzo work, garden work, etc.. that manage by the architect and observe by owner.
+            
+                %p Why this system is better than other, because if there is a problem with one contractor the other still can work and it possible for us to get our project on time. For the payment process will handle by the notaries after the owner give money to the notaries and then the notaries give the money to each contractor according to the conract and progress of the project after agreed by the architect (supervisor).
+            
+                %p.center That all about us. Thank you.
+          
+            #gallery>
+          
+            #contact>
+        
+        .right
+      
+      %nav<>
+        %a{href: '#', ng: {class: "isActive('about') ? 'active' : ''", click: "setActive('about')"}}>
+          %span About
+          
+          .step
+            .top
+            .front
+            .right
+        
+        %a{href: '#', ng: {class: "isActive('gallery') ? 'active' : ''", click: "setActive('gallery')"}}>
+          %span Gallery
+          
+          .step
+            .top
+            .front
+        
+        %a{href: '#', ng: {class: "isActive('contact') ? 'active' : ''", click: "setActive('contact')"}}>
+          %span Contact
+          
+          .step
+            .top
+            .left
+            .front

@@ -14,6 +14,11 @@ document.createElement 'FOOTER'
 Edwin = angular.module 'Edwin', []
 
 Edwin.controller 'WelcomeCtrl', ['$scope', ($scope) ->
+  $scope.setActive = (item)->
+    $scope.active = item
+  
+  $scope.isActive = (item)->
+    $scope.active == item
 ]
 
 Edwin.config ['$locationProvider', ($locationProvider)->

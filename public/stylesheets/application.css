@@ -106,25 +106,28 @@ input[type="file"] {
 @font-face {
   font-family: "Driftwood";
   font-style: normal;
-  src: local("Driftwood"), url("../fonts/Driftwood.eot") format("oet"), local("Driftwood"), url("../fonts/Driftwood.woff") format("woff"), local("Comfortaa Regular"), url("../fonts/Driftwood.ttf") format("truetype"), url("../fonts/Driftwood.svg") format("svg"); }
+  src: local("Driftwood"), url("../fonts/Driftwood.eot") format("oet"), local("Driftwood"), url("../fonts/Driftwood.woff") format("woff"), local("Driftwood"), url("../fonts/Driftwood.ttf") format("truetype"), url("../fonts/Driftwood.svg") format("svg"); }
+@font-face {
+  font-family: "Planer";
+  font-style: normal;
+  src: local("Planer"), url("../fonts/Planer.eot") format("oet"), local("Planer"), url("../fonts/Planer.woff") format("woff"), local("Planer"), url("../fonts/Planer.ttf") format("truetype"), url("../fonts/Planer.svg") format("svg"); }
 /* master */
 html {
   position: relative;
   min-width: 1000px;
   height: 100%;
-  min-height: 100%;
-  background: url("../images/backgrounds/bg.jpg") no-repeat center top;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  min-height: 100%; }
 
 html, html a {
   color: #fff;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5); }
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); }
 
 html * {
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -133,334 +136,385 @@ html * {
   box-sizing: border-box; }
 
 body {
-  font-size: 13px;
+  font-size: 20px;
   font-family: "Driftwood", sans-serif;
   -webkit-font-smoothing: antialiased;
-  line-height: 20px;
-  padding: 20px;
+  letter-spacing: 2px;
+  line-height: 26px;
+  height: 100%;
   min-height: 100%; }
 
 #container {
+  height: 100%;
+  min-height: 100%;
   margin-left: auto;
   margin-right: auto;
-  width: 960px; }
-  #container > header {
-    width: 100%;
-    height: 200px;
-    -moz-perspective: 500px;
-    -webkit-perspective: 500px;
-    -o-perspective: 500px;
-    -ms-perspective: 500px;
-    perspective: 500px;
-    perspective-origin: 50% 45%;
-    -moz-transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d; }
-    #container > header > h1 {
+  width: 100%;
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -o-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -moz-perspective-origin: center 15%;
+  -webkit-perspective-origin: center 15%;
+  -o-perspective-origin: center 15%;
+  -ms-perspective-origin: center 15%;
+  perspective-origin: center 15%; }
+  #container > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+    #container > .content > .top {
       position: absolute;
-      z-index: 10;
-      top: 100%;
+      z-index: 1;
       left: 0;
-      margin-top: -100px;
       width: 100%;
       height: 100px;
-      line-height: 100px;
-      vertical-align: bottom;
-      font-size: 90px;
-      text-align: center;
-      -moz-transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      transform: translateZ(-75px);
-      -moz-transform: translateZ(-75px);
-      -o-transform: translateZ(-75px);
-      -ms-transform: translateZ(-75px);
-      -webkit-transform: translateZ(-75px); }
-    #container > header > #carousel {
-      width: 100%;
-      height: 100%;
+      background: url("../images/backgrounds/main.jpg") center top;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      top: 0;
+      -webkit-transform: rotateX(-90deg);
+      -moz-transform: rotateX(-90deg);
+      -o-transform: rotateX(-90deg);
+      -ms-transform: rotateX(-90deg);
+      transform: rotateX(-90deg);
+      -moz-transform-origin: center top;
+      -webkit-transform-origin: center top;
+      -o-transform-origin: center top;
+      -ms-transform-origin: center top;
+      transform-origin: center top; }
+    #container > .content > .left, #container > .content > .right {
+      overflow: hidden;
       position: absolute;
-      -moz-transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-      transform-style: preserve-3d; }
-      #container > header > #carousel:before {
+      top: 0;
+      width: 100px;
+      height: 100%; }
+      #container > .content > .left:before, #container > .content > .right:before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 5;
-        margin: 5px;
-        border: 1px solid #000;
-        -moz-border-radius: 40px;
-        -o-border-radius: 40px;
-        -ms-border-radius: 40px;
-        -khtml-border-radius: 40px;
-        -webkit-border-radius: 40px;
-        border-radius: 40px;
-        opacity: 0.75;
-        -moz-opacity: 0.75;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
-      #container > header > #carousel:after {
-        content: "";
+        width: 5100%;
+        left: -2500%;
+        top: 2500px;
+        height: 100px;
+        background: url("../images/backgrounds/main.jpg") center top;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg); }
+    #container > .content > .left {
+      left: 0;
+      -webkit-transform: rotateY(90deg);
+      -moz-transform: rotateY(90deg);
+      -o-transform: rotateY(90deg);
+      -ms-transform: rotateY(90deg);
+      transform: rotateY(90deg);
+      -moz-transform-origin: left center;
+      -webkit-transform-origin: left center;
+      -o-transform-origin: left center;
+      -ms-transform-origin: left center;
+      transform-origin: left center; }
+    #container > .content > .middle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url("../images/backgrounds/main.jpg") center top;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      transform: translateZ(-100px);
+      -moz-transform: translateZ(-100px);
+      -o-transform: translateZ(-100px);
+      -ms-transform: translateZ(-100px);
+      -webkit-transform: translateZ(-100px); }
+      #container > .content > .middle > h1 {
+        position: relative;
+        z-index: 10;
+        line-height: 80px;
+        text-align: center;
+        height: 100px;
+        font-size: 80px; }
+        #container > .content > .middle > h1 > a {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      #container > .content > .middle .content {
+        overflow: auto;
         position: absolute;
-        top: 0;
+        width: 100%;
         left: 0;
-        right: 0;
-        bottom: 0;
+        top: 100px;
+        bottom: 50px; }
+        #container > .content > .middle .content #about {
+          text-align: justify; }
+          #container > .content > .middle .content #about > * {
+            zoom: 1;
+            vertical-align: top; }
+          #container > .content > .middle .content #about > .text {
+            width: 1000px;
+            position: relative;
+            margin: 20px auto;
+            padding: 30px;
+            background: #fff;
+            font-family: "Planer", sans-serif;
+            color: #000;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -khtml-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px; }
+            #container > .content > .middle .content #about > .text > * {
+              zoom: 1;
+              vertical-align: top; }
+            #container > .content > .middle .content #about > .text:before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+              -moz-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+              -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5); }
+            #container > .content > .middle .content #about > .text > h2 {
+              line-height: 50px;
+              text-align: center;
+              font-size: 40px; }
+              #container > .content > .middle .content #about > .text > h2 + * {
+                margin-top: 20px; }
+            #container > .content > .middle .content #about > .text > p.center {
+              text-align: center; }
+            #container > .content > .middle .content #about > .text > p + * {
+              margin-top: 20px; }
+    #container > .content > .right {
+      left: 100%;
+      margin-left: -100px;
+      -webkit-transform: rotateY(-90deg);
+      -moz-transform: rotateY(-90deg);
+      -o-transform: rotateY(-90deg);
+      -ms-transform: rotateY(-90deg);
+      transform: rotateY(-90deg);
+      -moz-transform-origin: right center;
+      -webkit-transform-origin: right center;
+      -o-transform-origin: right center;
+      -ms-transform-origin: right center;
+      transform-origin: right center; }
+  #container > nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    margin-top: -100px;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    text-align: center; }
+    #container > nav > * {
+      zoom: 1;
+      display: inline;
+      display: -moz-inline-box;
+      display: inline-block;
+      *display: inline;
+      vertical-align: top; }
+    #container > nav:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      left: 0;
+      top: 50%;
+      background: url("../images/backgrounds/main.jpg") center top;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+      transform: translateZ(-100px);
+      -moz-transform: translateZ(-100px);
+      -o-transform: translateZ(-100px);
+      -ms-transform: translateZ(-100px);
+      -webkit-transform: translateZ(-100px); }
+    #container > nav > a {
+      position: relative;
+      width: 33.33%;
+      height: 100px;
+      font-size: 50px;
+      vertical-align: bottom;
+      opacity: 0.9;
+      -moz-opacity: 0.9;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=90)";
+      -webkit-transition: opacity 0.25s ease-out;
+      -moz-transition: opacity 0.25s ease-out;
+      -o-transition: opacity 0.25s ease-out;
+      -ms-transition: opacity 0.25s ease-out;
+      transition: opacity 0.25s ease-out; }
+      #container > nav > a:hover {
+        opacity: 1;
+        -moz-opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; }
+      #container > nav > a > span {
+        overflow: hidden;
+        zoom: 1;
+        display: inline;
+        display: -moz-inline-box;
+        display: inline-block;
+        *display: inline;
+        vertical-align: bottom;
+        width: 100%;
+        height: 100px;
+        line-height: 150px;
+        position: relative;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        transform: translateZ(-50px);
+        -moz-transform: translateZ(-50px);
+        -o-transform: translateZ(-50px);
+        -ms-transform: translateZ(-50px);
+        -webkit-transform: translateZ(-50px); }
+      #container > nav > a > .step {
+        position: absolute;
         z-index: 1;
-        margin: -10px;
-        border: 1px solid #000;
-        -moz-border-radius: 55px;
-        -o-border-radius: 55px;
-        -ms-border-radius: 55px;
-        -khtml-border-radius: 55px;
-        -webkit-border-radius: 55px;
-        border-radius: 55px;
-        opacity: 0.75;
-        -moz-opacity: 0.75;
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
-      #container > header > #carousel > .front {
-        position: absolute;
-        width: 980px;
-        height: 220px;
-        margin-left: -10px;
-        margin-top: -10px;
-        border: 15px solid transparent;
-        background: url("../images/backgrounds/front_wood.png") no-repeat center;
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.25);
-        -moz-border-radius: 55px;
-        -o-border-radius: 55px;
-        -ms-border-radius: 55px;
-        -khtml-border-radius: 55px;
-        -webkit-border-radius: 55px;
-        border-radius: 55px; }
-        #container > header > #carousel > .front:before {
-          content: "";
+        left: 0;
+        width: 100%;
+        height: 0;
+        top: 100%;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out; }
+        #container > nav > a > .step > div {
           position: absolute;
-          top: 0;
+          width: 100%;
+          height: 100px;
           left: 0;
-          right: 0;
-          bottom: 0;
-          -moz-transform-style: preserve-3d;
-          -webkit-transform-style: preserve-3d;
-          -o-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-          -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
-          -moz-border-radius: 40px;
-          -o-border-radius: 40px;
-          -ms-border-radius: 40px;
-          -khtml-border-radius: 40px;
-          -webkit-border-radius: 40px;
-          border-radius: 40px; }
-        #container > header > #carousel > .front:after {
-          content: "";
-          position: absolute;
-          z-index: 1;
-          left: -15px;
-          right: -15px;
-          bottom: -15px;
-          top: -15px;
-          -moz-transform-style: preserve-3d;
-          -webkit-transform-style: preserve-3d;
-          -o-transform-style: preserve-3d;
-          -ms-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-          -moz-border-radius: 55px;
-          -o-border-radius: 55px;
-          -ms-border-radius: 55px;
-          -khtml-border-radius: 55px;
-          -webkit-border-radius: 55px;
-          border-radius: 55px; }
-      #container > header > #carousel > .back {
-        position: absolute;
-        width: 980px;
-        height: 220px;
-        margin-left: -10px;
-        margin-top: -10px;
-        border: 10px solid transparent;
-        background: url("../images/backgrounds/back_wood.png") no-repeat center;
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        -moz-border-radius: 55px;
-        -o-border-radius: 55px;
-        -ms-border-radius: 55px;
-        -khtml-border-radius: 55px;
-        -webkit-border-radius: 55px;
-        border-radius: 55px;
-        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-        -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
-        transform: rotateY(180deg) translateZ(200px); }
-        #container > header > #carousel > .back:before {
-          content: "";
-          z-index: 1;
-          position: absolute;
           top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
-          -moz-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
-          -webkit-box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.75);
-          -moz-border-radius: 40px;
-          -o-border-radius: 40px;
-          -ms-border-radius: 40px;
-          -khtml-border-radius: 40px;
-          -webkit-border-radius: 40px;
-          border-radius: 40px; }
-        #container > header > #carousel > .back:after {
-          content: "";
-          z-index: 5;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border: 1px solid #000;
-          -moz-border-radius: 40px;
-          -o-border-radius: 40px;
-          -ms-border-radius: 40px;
-          -khtml-border-radius: 40px;
-          -webkit-border-radius: 40px;
-          border-radius: 40px;
-          opacity: 0.75;
-          -moz-opacity: 0.75;
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=75)"; }
-      #container > header > #carousel > .top {
-        position: absolute;
-        width: 904px;
-        height: 200px;
-        margin-left: 28px;
-        background: #704442 url("../images/backgrounds/wood.jpg");
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        transform: rotateX(90deg) translateZ(100px) translateY(-100px);
-        box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4); }
-      #container > header > #carousel > .bottom {
-        position: absolute;
-        width: 904px;
-        height: 200px;
-        margin-left: 28px;
-        background: #704442 url("../images/backgrounds/wood.jpg");
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        transform: rotateX(-90deg) translateZ(100px) translateY(100px);
-        box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: inset 0 200px 50px rgba(0, 0, 0, 0.4); }
-      #container > header > #carousel > .left {
-        position: absolute;
-        width: 100px;
-        height: 200px;
-        left: 50px;
-        background: #704442 url("../images/backgrounds/wood.jpg");
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px) translateY(100px);
-        box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4); }
-      #container > header > #carousel > .right {
-        position: absolute;
-        width: 100px;
-        height: 200px;
-        left: 100%;
-        margin-left: 50px;
-        background: #704442 url("../images/backgrounds/wood.jpg");
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px) translateY(100px);
-        box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4);
-        -webkit-box-shadow: inset -200px 0 50px rgba(0, 0, 0, 0.4); }
-      #container > header > #carousel > .corner {
-        width: 24px;
-        height: 200px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -12px;
-        margin-top: -100px;
-        -moz-transform-style: preserve-3d;
-        -webkit-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        -ms-transform-style: preserve-3d;
-        transform-style: preserve-3d; }
-        #container > header > #carousel > .corner > section {
-          position: absolute;
-          width: 24px;
-          height: 200px;
-          background: #704442 url("../images/backgrounds/wood.jpg");
-          box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
-          -moz-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4);
-          -webkit-box-shadow: inset 0 -200px 50px rgba(0, 0, 0, 0.4); }
-        #container > header > #carousel > .corner.top-left {
-          transform: rotateX(90deg) translateX(-440px) translateY(-100px) translateZ(60px); }
-          #container > header > #carousel > .corner.top-left > section:nth-child(1) {
-            transform: rotateY(270deg) translateZ(40px); }
-          #container > header > #carousel > .corner.top-left > section:nth-child(2) {
-            transform: rotateY(300deg) translateZ(40px); }
-          #container > header > #carousel > .corner.top-left > section:nth-child(3) {
-            transform: rotateY(330deg) translateZ(40px); }
-        #container > header > #carousel > .corner.top-right {
-          transform: rotateX(90deg) translateX(440px) translateY(-100px) translateZ(60px); }
-          #container > header > #carousel > .corner.top-right > section:nth-child(1) {
-            transform: rotateY(30deg) translateZ(40px); }
-          #container > header > #carousel > .corner.top-right > section:nth-child(2) {
-            transform: rotateY(60deg) translateZ(40px); }
-          #container > header > #carousel > .corner.top-right > section:nth-child(3) {
-            transform: rotateY(90deg) translateZ(40px); }
-        #container > header > #carousel > .corner.bottom-left {
-          transform: rotateX(90deg) translateX(-440px) translateY(-100px) translateZ(-60px); }
-          #container > header > #carousel > .corner.bottom-left > section:nth-child(1) {
-            transform: rotateY(210deg) translateZ(40px); }
-          #container > header > #carousel > .corner.bottom-left > section:nth-child(2) {
-            transform: rotateY(240deg) translateZ(40px); }
-          #container > header > #carousel > .corner.bottom-left > section:nth-child(3) {
-            transform: rotateY(270deg) translateZ(40px); }
-        #container > header > #carousel > .corner.bottom-right {
-          transform: rotateX(90deg) translateX(440px) translateY(-100px) translateZ(-60px); }
-          #container > header > #carousel > .corner.bottom-right > section:nth-child(1) {
-            transform: rotateY(90deg) translateZ(40px); }
-          #container > header > #carousel > .corner.bottom-right > section:nth-child(2) {
-            transform: rotateY(120deg) translateZ(40px); }
-          #container > header > #carousel > .corner.bottom-right > section:nth-child(3) {
-            transform: rotateY(150deg) translateZ(40px); }
+          -webkit-transition: all 0.25s ease-in-out;
+          -moz-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          -ms-transition: all 0.25s ease-in-out;
+          transition: all 0.25s ease-in-out; }
+        #container > nav > a > .step > .top {
+          background: url("../images/backgrounds/main.jpg") center top;
+          box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+          -webkit-transform: rotateX(-90deg);
+          -moz-transform: rotateX(-90deg);
+          -o-transform: rotateX(-90deg);
+          -ms-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+          -moz-transform-origin: center top;
+          -webkit-transform-origin: center top;
+          -o-transform-origin: center top;
+          -ms-transform-origin: center top;
+          transform-origin: center top; }
+        #container > nav > a > .step > .front {
+          height: 0;
+          background: url("../images/backgrounds/main.jpg") center top;
+          box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+          -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75); }
+        #container > nav > a > .step > .left {
+          overflow: hidden;
+          width: 100px;
+          height: 0;
+          transform: rotateY(90deg);
+          -webkit-transform: rotateY(90deg);
+          -moz-transform: rotateY(90deg);
+          -o-transform: rotateY(90deg);
+          -ms-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+          -moz-transform-origin: left center;
+          -webkit-transform-origin: left center;
+          -o-transform-origin: left center;
+          -ms-transform-origin: left center;
+          transform-origin: left center; }
+          #container > nav > a > .step > .left:before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            background: url("../images/backgrounds/main.jpg") center top;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+        #container > nav > a > .step > .right {
+          overflow: hidden;
+          left: 100%;
+          margin-left: -100px;
+          width: 100px;
+          height: 0;
+          -webkit-transform: rotateY(-90deg);
+          -moz-transform: rotateY(-90deg);
+          -o-transform: rotateY(-90deg);
+          -ms-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+          -moz-transform-origin: right center;
+          -webkit-transform-origin: right center;
+          -o-transform-origin: right center;
+          -ms-transform-origin: right center;
+          transform-origin: right center; }
+          #container > nav > a > .step > .right:before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            background: url("../images/backgrounds/main.jpg") center top;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+      #container > nav > a:hover > span {
+        transform: translateZ(-50px) translateY(-5px);
+        -moz-transform: translateZ(-50px) translateY(-5px);
+        -o-transform: translateZ(-50px) translateY(-5px);
+        -ms-transform: translateZ(-50px) translateY(-5px);
+        -webkit-transform: translateZ(-50px) translateY(-5px); }
+      #container > nav > a:hover > .step {
+        margin-top: -5px;
+        height: 5px; }
+        #container > nav > a:hover > .step > .front, #container > nav > a:hover > .step > .left, #container > nav > a:hover > .step > .right {
+          height: 5px; }
+      #container > nav > a.active {
+        opacity: 1;
+        -moz-opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=100)"; }
+        #container > nav > a.active > span {
+          transform: translateZ(-50px) translateY(-10px);
+          -moz-transform: translateZ(-50px) translateY(-10px);
+          -o-transform: translateZ(-50px) translateY(-10px);
+          -ms-transform: translateZ(-50px) translateY(-10px);
+          -webkit-transform: translateZ(-50px) translateY(-10px); }
+        #container > nav > a.active > .step {
+          margin-top: -10px;
+          height: 10px; }
+          #container > nav > a.active > .step > .front, #container > nav > a.active > .step > .left, #container > nav > a.active > .step > .right {
+            height: 10px; }

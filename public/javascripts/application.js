@@ -27,7 +27,16 @@
 
   Edwin = angular.module('Edwin', []);
 
-  Edwin.controller('WelcomeCtrl', ['$scope', function($scope) {}]);
+  Edwin.controller('WelcomeCtrl', [
+    '$scope', function($scope) {
+      $scope.setActive = function(item) {
+        return $scope.active = item;
+      };
+      return $scope.isActive = function(item) {
+        return $scope.active === item;
+      };
+    }
+  ]);
 
   Edwin.config([
     '$locationProvider', function($locationProvider) {

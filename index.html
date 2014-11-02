@@ -12,6 +12,38 @@
     <!--[if IE]>
       <link href='public/stylesheets/ie.css' rel='stylesheet' type='text/css'>
     <![endif]-->
-  </head><body ng-controller='WelcomeCtrl'><div id='container'><header>
-    <h1>Edwin Ulin</h1>
-  </header></div></body></html>
+  </head><body ng-controller='WelcomeCtrl'><div id='container'><div class='content'>
+    <div class='top'></div>
+    <div class='left'></div>
+    <div class='middle'><h1><a href='#'>Edwin Ulin</a></h1><div class='content'><div id='about'>
+        <div class='text'>
+          <p>My name is Mr. Edwin Ibrahim. Our company focuses on design and supervising consultant. As a design company we use ecology concept that combine with modern material.</p>
+          <p>The shape and function of building is according to the owner (according the global concept that owner give) blended with architect creativity and appropriate with land and building regulation. As a supervisor consultant we act as e mediator between owner and contractor.</p>
+          <p>We have system when we do our project. We use more than one contractor and divide the contractor according to their skills depend on the job description on the project like sctucture construction, glass work, electrical work, terrazzo work, garden work, etc.. that manage by the architect and observe by owner.</p>
+          <p>Why this system is better than other, because if there is a problem with one contractor the other still can work and it possible for us to get our project on time. For the payment process will handle by the notaries after the owner give money to the notaries and then the notaries give the money to each contractor according to the conract and progress of the project after agreed by the architect (supervisor).</p>
+          <p class='center'>That all about us. Thank you.</p>
+        </div>
+      </div><div id='gallery'></div><div id='contact'></div></div>
+    </div>
+    <div class='right'></div>
+  </div><nav><a href='#' ng-class="isActive('about') ? 'active' : ''" ng-click="setActive('about')">
+    <span>About</span>
+    <div class='step'>
+      <div class='top'></div>
+      <div class='front'></div>
+      <div class='right'></div>
+    </div>
+  </a><a href='#' ng-class="isActive('gallery') ? 'active' : ''" ng-click="setActive('gallery')">
+    <span>Gallery</span>
+    <div class='step'>
+      <div class='top'></div>
+      <div class='front'></div>
+    </div>
+  </a><a href='#' ng-class="isActive('contact') ? 'active' : ''" ng-click="setActive('contact')">
+    <span>Contact</span>
+    <div class='step'>
+      <div class='top'></div>
+      <div class='left'></div>
+      <div class='front'></div>
+    </div>
+  </a></nav></div></body></html>
