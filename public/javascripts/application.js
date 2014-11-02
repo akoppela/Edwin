@@ -60,4 +60,17 @@
     }
   ]);
 
+  Edwin.run([
+    '$rootScope', '$location', function($rootScope, $location) {
+      return $rootScope.$on('duScrollspy:becameActive', function($event, $element) {
+        var hash;
+        hash = $element.prop('hash');
+        if (hash) {
+          $location.hash(hash.substr(1)).replace();
+          return $rootScope.$apply();
+        }
+      });
+    }
+  ]);
+
 }).call(this);

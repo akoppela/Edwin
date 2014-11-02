@@ -56,3 +56,11 @@ Edwin.controller 'WelcomeCtrl', ['$scope', ($scope) ->
 Edwin.config ['$locationProvider', ($locationProvider)->
   $locationProvider.html5Mode true
 ]
+
+Edwin.run ['$rootScope', '$location', ($rootScope, $location)->
+  $rootScope.$on 'duScrollspy:becameActive', ($event, $element)->
+    hash = $element.prop 'hash'
+    if hash
+      $location.hash(hash.substr(1)).replace()
+      $rootScope.$apply()
+]
