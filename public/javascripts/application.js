@@ -56,7 +56,10 @@
 
   Edwin.config([
     '$locationProvider', function($locationProvider) {
-      return $locationProvider.html5Mode(true);
+      return $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
     }
   ]);
 

@@ -54,7 +54,9 @@ Edwin.controller 'WelcomeCtrl', ['$scope', '$window', ($scope, $window) ->
 ]
 
 Edwin.config ['$locationProvider', ($locationProvider)->
-  $locationProvider.html5Mode true
+  $locationProvider.html5Mode
+    enabled: true
+    requireBase: false
 ]
 
 Edwin.run ['$rootScope', '$location', ($rootScope, $location)->
